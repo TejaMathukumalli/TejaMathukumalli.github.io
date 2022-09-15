@@ -1,0 +1,129 @@
+/*https://material.io/design/material-studies/basil.html#color*/
+/*https://waymo.com/*/
+/*these are the websited you need*/
+
+body {
+    display:grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    margin: 0;
+    height:100vh; /*in order to get the design you want ot get you need to remove this */
+
+}
+header{
+    background-color: whitesmoke; 
+    grid-column-start: 1 ;
+    grid-column-end: 4 ;
+    height: 550px;
+    text-align: center;
+    font-size:xx-large;
+    z-index: 4;
+    box-shadow: 5px 5px 5px 0px gray;
+
+}
+
+nav{
+    background-color: rgb(255, 205, 216);
+    z-index: 2;
+    box-shadow: 2px 0px 1px 0px gray;
+    padding-left: 3%;
+    padding-top:5
+
+}
+
+nav a {
+    display:block;
+}
+
+main{
+    background-color: brown;
+    height: 2050px;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr ;
+    overflow-y: scroll;
+   
+}
+
+aside{
+    background-color: darkgoldenrod;
+    z-index: 2;
+    box-shadow: -2px 0px 1px 0px gray;
+    
+}
+
+footer{
+    background-color: darkolivegreen;
+    grid-column-start: 1 ;
+    grid-column-end: 4 ;
+    height: 100px;
+    text-align: center;
+    font-size: x-large;
+    box-shadow: 0px -3px 2px 0px gray;
+    z-index: 3;
+    
+}
+
+.card{
+    
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: aqua;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: larger;
+    border-radius: 25px;
+    box-shadow: 5px 3px 4px 0 rgb(68, 141, 65);
+    border: 1px solid yellow;
+     }
+
+     .card h3{
+        text-align: center;
+        
+     }
+     .card p{
+        padding-left: 10px;
+        padding-right:10px;
+     }
+     img {
+        width: 200px;
+        float: left;
+        padding-top: 5%;
+     }
+     .card-container {
+        grid-column-start: 2;
+        grid-column-end:3 ;
+     }
+     
+     ul {
+        list-style-type: lower-greek;
+     }
+
+     @media only screen and (max-width: 600px) {
+        header {
+          background-color: green;
+        }
+
+        main {
+            grid-column-start: 1 ;
+            grid-column-end: 4 ;
+        }
+
+        aside{
+            display:none;
+        }
+
+        body {
+            grid-template-rows: 1fr 4fr 1fr 1fr;
+            height: 116.6vh;
+        }
+
+        nav{
+            grid-row-start:3;
+            grid-row-end:4;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+      }
+     
